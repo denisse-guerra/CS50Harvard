@@ -1,0 +1,39 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+   int height, row, column, space;
+    // Ask for the height of the pyramids to the user
+   do
+    {
+      height = get_int("Height: ");
+    }
+
+   while (height < 1 || height > 8);
+   // create rows linked to the columns
+   for (row = 0; row < height; row++)
+     {
+    for (space = 0; space < height - row - 1; space++)
+     {
+         // change the pyramid from left to right with spaces
+
+      printf(" ");
+     }
+      for (column = 0; column <= row; column++)
+      //first pyramid
+         {
+            printf("#");
+         }
+
+      printf("  ");
+      // second pyramid
+      for (column = 0; column <= row; column++)
+
+
+      printf("#");
+
+      printf("\n");
+    }
+
+}
